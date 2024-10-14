@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<!-- Define o tipo de documento como HTML5 e define o idioma como português brasileiro -->
 <head>
     <meta charset="UTF-8">
+    <!-- Define o charset como UTF-8 para suportar caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura o layout responsivo para dispositivos móveis -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Importa o arquivo CSS externo -->
     <title>Finanças</title>
+    <!-- Define o título da página como "Finanças" -->
 </head>
 <body>
+    <!-- Início do corpo da página -->
     <main>
+      <!-- Elemento principal da página -->
       <div class="resume">
+        <!-- Div para exibir o resumo financeiro: Entradas, Saídas e Total -->
         <div>
           Entradas: R$
           <span class="incomes">0.00</span>
+          <!-- Exibe o valor das entradas -->
         </div>
         <div>
           Saídas: R$
           <span class="expenses">0.00</span>
+          <!-- Exibe o valor das saídas -->
         </div>
         <div>
           Total: R$
           <span class="total">0.00</span>
+          <!-- Exibe o valor total -->
         </div>
       </div>
       <div class="newItem">
+        <!-- Div para adicionar novos itens de transação -->
         <div class="divDesc">
+          <!-- Input para descrição do item -->
           <label for="desc">Descrição</label>
           <input type="text" id="desc" />
         </div>
         <div class="divAmount">
+          <!-- Input para o valor da transação -->
           <label for="amount">Valor</label>
           <input type="number" id="amount" />
         </div>
         <div class="divType">
+          <!-- Seleção para definir o tipo de transação (Entrada ou Saída) -->
           <label for="type">Tipo</label>
           <select id="type">
             <option>Entrada</option>
@@ -39,11 +54,14 @@
           </select>
         </div>
         <button id="btnNew">Incluir</button>
+        <!-- Botão para adicionar uma nova transação -->
       </div>
       <div class="divTable">
+        <!-- Div contendo a tabela de itens -->
         <table>
           <thead>
             <tr>
+              <!-- Cabeçalho da tabela com colunas para Descrição, Valor, Tipo e Ação -->
               <th>Descrição</th>
               <th class="columnAmount">Valor</th>
               <th class="columnType">Tipo</th>
@@ -51,10 +69,15 @@
             </tr>
           </thead>
           <tbody>
+          <!-- O corpo da tabela será preenchido dinamicamente -->
           </tbody>
         </table>
-    </main>  
-  
-    <script src="script.js"></script>
+      </div> <!-- Fechando a tag div da tabela -->
+    </main>
+    <!-- Scripts externos necessários para funcionalidade -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- Importa o script para os ícones (Boxicons) -->
+    <script src="js/script.js"></script>
+    <!-- Importa o script JavaScript que lida com a lógica da aplicação -->
   </body>
 </html>
